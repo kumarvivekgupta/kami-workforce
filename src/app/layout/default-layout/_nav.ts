@@ -10,17 +10,17 @@ export const navItems: any[] = [
     name: 'Photos',
     link: '/photos',
     linkProps: { fragment: 'headings' },
-    icon: 'bi-house-door'
+    icon: 'bi-camera'
   },
   {
     name: 'Albums',
     link: '/albums',
     linkProps: { fragment: 'headings' },
-    icon: 'bi-house-door'
+    icon: 'bi-images'
   },
   {
     name: 'Posts',
     link: '/posts',
-    icon: 'bi-house-door'
+    icon: 'bi-chat'
   }
 ];
