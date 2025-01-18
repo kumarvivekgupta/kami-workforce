@@ -1,0 +1,15 @@
+<div>
+    <h1 class="fs-4">Top Posts (6)</h1>
+
+    <div *ngIf="isLoading" class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column gap-4" *ngIf="!isLoading">
+        <ng-container *ngFor="let post of recentPostWithUsers" >
+            <app-single-post [post]="post"></app-single-post>
+        </ng-container>
+    </div>
+</div>

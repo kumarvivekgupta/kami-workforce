@@ -1,0 +1,27 @@
+.avatar {
+    width: 50px; /* Set the size of the avatar */
+    height: 50px;
+    border-radius: 50%; /* Makes the div circular */
+    background-color: #007bff; /* Avatar background color */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the text inside the circle */
+    font-size: 24px; /* Text size */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.name-container {
+    height: 200px;
+    width: 500px;
+}
+.personal-container {
+    width: 500px;
+}
+
+.post-container {
+    width: 500px;
+    max-height: 500px;
+    overflow-y: scroll;
+}

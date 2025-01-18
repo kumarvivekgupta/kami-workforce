@@ -1,0 +1,16 @@
+.photo-container {
+    width: 150px;
+    height: 200px;
+}
+
+.photo-container-full {
+    width: 300px;
+    height: 350px;
+}
+
+.single-line-text {
+    white-space: nowrap;          /* Prevents the text from wrapping to a new line */
+    overflow: hidden;             /* Hides the overflowed text */
+    text-overflow: ellipsis;      /* Adds the ellipsis (...) when the text overflows */
+    width: 150px;                 /* Optional: Set a fixed width (or use `max-width` as needed) */
+  }

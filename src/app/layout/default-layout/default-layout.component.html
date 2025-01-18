@@ -1,0 +1,88 @@
+<!--sidebar-->
+<!-- <c-sidebar
+  #sidebar1="cSidebar"
+  class="d-print-none sidebar sidebar-fixed border-end"
+  colorScheme="dark"
+  id="sidebar1"
+  visible
+>
+  <c-sidebar-header class="border-bottom">
+    <c-sidebar-brand [routerLink]="[]">
+      <svg [class]="{icon: false}" cIcon class="sidebar-brand-full" height="32" name="logo" title="CoreUI Logo"></svg>
+      <svg cIcon class="sidebar-brand-narrow" height="32" name="signet" title="CoreUI Logo"></svg>
+    </c-sidebar-brand>
+  </c-sidebar-header>
+
+  <ng-scrollbar #scrollbar="ngScrollbar" (updated)="onScrollbarUpdate(scrollbar.state)" class="overflow" pointerEventsMethod="scrollbar" visibility="hover">
+    <c-sidebar-nav #overflow [navItems]="navItems" dropdownMode="close" compact />
+  </ng-scrollbar>
+  @if (!sidebar1.narrow) {
+    <c-sidebar-footer cSidebarToggle="sidebar1" class="border-top d-none d-lg-flex" toggle="unfoldable" style="cursor: pointer;">
+      <button cSidebarToggler aria-label="Toggle sidebar fold"></button>
+    </c-sidebar-footer>
+  }
+</c-sidebar> -->
+
+
+<div id="sidebar1" class="d-flex flex-column bg-dark text-white sidebar fixed-top border-end" style="height: 100vh;">
+  <!-- Sidebar Header -->
+  <div class="border-bottom p-3">
+    <a href="#" class="d-flex align-items-center text-white text-decoration-none">
+      <!-- Full logo (can replace with your logo SVG) -->
+      <!-- <svg class="sidebar-brand-full" height="32" xmlns="http://www.w3.org/2000/svg" title="Logo">
+        
+      </svg> -->
+      <!-- Narrow logo (can replace with your logo SVG) -->
+
+      <!-- <svg class="sidebar-brand-narrow d-none" height="32" xmlns="http://www.w3.org/2000/svg" title="Logo">
+        
+      </svg> -->
+      <p>My App</p>
+    </a>
+  </div>
+
+  <!-- Sidebar Navigation (Scrollable) -->
+  <div class="overflow-auto flex-grow-1" style="max-height: calc(100vh - 150px);">
+    <ul class="nav flex-column">
+      <!-- Loop through navItems to create dynamic navigation items -->
+      <li class="nav-item" *ngFor="let item of navItems">
+        <a 
+          [routerLink]="item.link" 
+          routerLinkActive="active" 
+          class="nav-link text-white"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i class="bi" [ngClass]="item.icon"></i> {{ item.name }}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- Sidebar Footer (Only visible on larger screens) -->
+  <!-- <div class="border-top d-none d-lg-flex justify-content-center py-3">
+    <button class="btn btn-outline-light" aria-label="Toggle sidebar fold" (click)="toggleSidebar()">
+      <i class="bi bi-arrow-bar-right"></i> Toggle Sidebar
+    </button>
+  </div> -->
+</div>
+
+<!--main-->
+<div class="wrapper d-flex flex-column min-vh-100 custom-light-grey pt-3">
+  <!--app-header-->
+  <!-- <app-default-header
+    [cShadowOnScroll]="'sm'"
+    class="mb-4 d-print-none header header-sticky p-0 shadow-sm"
+    position="sticky"
+    sidebarId="sidebar1"
+  /> -->
+  
+  <!--app-body-->
+  <div class="body flex-grow-1">
+    <ng-container breakpoint="lg" class="h-auto px-4">
+      <router-outlet />
+    </ng-container>
+  </div>
+  <!--app footer-->
+  <!-- <app-default-footer /> -->
+</div>

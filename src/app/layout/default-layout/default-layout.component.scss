@@ -1,0 +1,76 @@
+:host {
+  .ng-scrollbar {
+    --scrollbar-padding: 1px;
+    --scrollbar-size: 5px;
+    --scrollbar-thumb-color: var(--cui-gray-500, #999);
+    --scrollbar-thumb-hover-color: var(--cui-gray-400, #999);
+    --scrollbar-hover-size: calc(var(--scrollbar-size) * 1.5);
+  }
+}
+
+/* Optional custom styles for the sidebar */
+.sidebar {
+  width: 250px;
+  transition: width 0.3s ease;
+}
+
+.sidebar .sidebar-brand-full,
+.sidebar .sidebar-brand-narrow {
+  transition: opacity 0.3s ease;
+}
+
+/* When sidebar is collapsed, hide the full logo */
+.sidebar.collapsed .sidebar-brand-full {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-brand-narrow {
+  display: block;
+}
+
+/* Page content with a margin when sidebar is expanded */
+.ml-250 {
+  margin-left: 250px;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+/* Adjust sidebar width when collapsed */
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Active link style */
+.nav-link.active {
+  background-color: #007bff; /* Change this to your desired active background color */
+  color: #fff;               /* Optional: Change text color */
+  font-weight: bold;         /* Optional: Make text bold */
+}
+
+/* Optional: Style for when the sidebar is collapsed */
+.sidebar.collapsed .nav-link.active {
+  background-color: #0056b3;  /* Change the background color when the sidebar is collapsed */
+}
+.custom-light-grey {
+  background-color: lightgrey;  /* You can also use hex values like #D3D3D3 */
+}
+
+
+
+
+// ng-scrollbar css variables
+//.cui-scrollbar {
+//  --scrollbar-border-radius: 7px;
+//  --scrollbar-padding: 1px;
+//  --scrollbar-viewport-margin: 0;
+//  --scrollbar-track-color: transparent;
+//  --scrollbar-wrapper-color: transparent;
+//  --scrollbar-thumb-color: rgba(0, 0, 0, 0.2);
+//  --scrollbar-thumb-hover-color: var(--scrollbar-thumb-color);
+//  --scrollbar-size: 5px;
+//  --scrollbar-hover-size: var(--scrollbar-size);
+//  --scrollbar-thumb-transition: height ease-out 150ms, width ease-out 150ms;
+//  --scrollbar-track-transition: height ease-out 150ms, width ease-out 150ms;
+//}

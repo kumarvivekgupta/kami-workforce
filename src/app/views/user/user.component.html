@@ -1,0 +1,30 @@
+<div class="d-flex flex-column gap-2 justify-content-center align-items-center">
+    <div class="d-flex flex-column justify-content-center name-container card align-items-center">
+
+        <span  class="avatar">{{userDetails?.name?.charAt(0)?.toUpperCase()}}</span>
+        <span class="text-primary fw-bold">{{userDetails?.username}}</span>
+
+    </div>
+    <div class="d-flec flex-column gap-3 card personal-container p-3">
+        <p class="">Personal Information</p>
+        <div class="d-flex flex-row gap-3">
+            <div><p class="text-secondary">Name</p><p class="fw-bold">{{userDetails?.name}}</p></div>
+            <div><p class="text-secondary">Email</p><p class="fw-bold">{{userDetails?.email}}</p></div>
+            <div><p class="text-secondary">Phone</p><p class="fw-bold">{{userDetails?.phone}}</p></div>
+        </div>
+        <div class="d-flex flex-row gap-3">
+
+            <div><p class="text-secondary">Website</p><p class="fw-bold">{{userDetails?.website}}</p></div>
+            <div><p class="text-secondary">Comapny</p><p class="fw-bold">{{userDetails?.company?.name}}</p></div>
+        </div>
+
+    </div>
+    <div class="d-flex flex-column card post-container p-3 gap-2">
+        <p>Posts</p>
+
+        <ng-container *ngFor="let post of savedPosts">
+            <app-single-post [post]="post" [recentPost]="true" (navigateUser)="navigateUser($event)"></app-single-post>
+        </ng-container>
+
+    </div>
+</div>

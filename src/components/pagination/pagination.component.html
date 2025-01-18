@@ -1,0 +1,6 @@
+
+<div class="d-flex flex-row justify-content-start align-items-baseline">
+    <button [disabled]="currentPage===1" (click)="prev()">Prev</button>
+    <p>{{currentPage}} of {{totalPages}}</p>
+    <button  [disabled]="currentPage===totalPages"  (click)="next()">Next</button>
+</div>

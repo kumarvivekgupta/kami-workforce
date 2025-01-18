@@ -1,0 +1,13 @@
+<div *ngIf="!list" class="d-flex flex-column align-items-center photo-container">
+   
+    <img alt="image"  src="./assets/images/image.png" class="img-fluid" style="width: 150px; height: 150px;" />
+    <p  class="ms-3 mb-0 text-truncate w-100">{{photo.title}}</p>
+</div>
+  
+
+
+<div *ngIf="list" class="d-flex flex-column align-items-center photo-container-full card p-2">
+    <p  class="ms-3 mb-0 text-truncate text-primary w-100">{{photo.title}}</p>
+    <img alt="image" src="./assets/images/image.png" class="img-fluid" style="width: 300px; height: 300px;" />
+   
+</div>
